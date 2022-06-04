@@ -31,6 +31,7 @@ def main(argv):
     )
     tokenizer = ByteLevelBPETokenizer()
     # Train the tokenizer
+    file_path = "generated_data/data.txt"
     tokenizer.train(
         files=file_path, vocab_size=50_000, min_frequency=1, special_tokens=special_tokens
     )
